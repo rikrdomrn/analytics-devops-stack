@@ -1,0 +1,10 @@
+#Data directories
+postgres-data/
+notebooks/.ipynb_checkpoints/
+
+#Environment files
+.env
+
+#Logs
+*.log
+
