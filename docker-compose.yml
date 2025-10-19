@@ -47,7 +47,17 @@ services:
     depends_on:
       - postgres
 
+# ETL Service
+  etl:
+    build: ./etl
+    container_name: analytics_etl
+    volumes:
+      - ./etl/sample_data.csv:/data/sample_data.csv
+    networks:
+      - analytics-network
+    depends_on:
+      - postgres
+
 networks:
   analytics-network:
     driver: bridge
-
