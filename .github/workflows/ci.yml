@@ -39,7 +39,7 @@ jobs:
 
      - name: Validate ETL script syntax
        run: |
-         if [ -f "etl/sample_data.csv"; then
+         if [ -f "etl/sample_data.csv" ]; then
            echo "Sample data filde found!"
          else
            echo "Sample data file missing!"
